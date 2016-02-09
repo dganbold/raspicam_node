@@ -19,15 +19,15 @@ http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Indigo%20on%20Raspberry%20Pi
 ###2. Installation
 
 1. Clone the repository:
-	
-	cd /home/pi/catkin_ws/src
-	git clone https://github.com/dganbold/raspicam_ros.git
+
+		cd /home/pi/catkin_ws/src
+		git clone https://github.com/dganbold/raspicam_ros.git
 
 2. Build
-	
-	source /opt/ros/indigo/setup.bash
-	cd /home/pi/catkin_ws/
-	catkin_make
+
+		source /opt/ros/indigo/setup.bash
+		cd /home/pi/catkin_ws/
+		catkin_make
 
 ###3. Usage
 	source devel/setup.bash
