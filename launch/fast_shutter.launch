@@ -1,0 +1,30 @@
+<launch>
+
+  <arg name="width"        		    default="640"/>
+  <arg name="height"       		    default="480"/>
+  <arg name="framerate"    		    default="10"/>
+  <arg name="videoStabilisation"	default="1"/>
+  <arg name="rotation"    		    default="0"/>
+  <arg name="brithness"           default="100"/>
+  <arg name="saturation"          default="0"/>
+  <arg name="shutter_speed"       default="6000"/>
+  <arg name="iso"                 default="1000"/>
+  <arg name="drc_level"           default="3"/>
+
+  <node pkg="raspicam_ros" type="raspicam_node" name="raspicam_node">
+    <param name="width"        		    value="$(arg width)"/>
+    <param name="height"       		    value="$(arg height)"/>
+    <param name="framerate"    		    value="$(arg framerate)"/>
+    <param name="videoStabilisation"  value="$(arg videoStabilisation)"/>
+    <param name="rotation"		        value="$(arg rotation)"/>
+    <param name="brithness"           value="$(arg brithness)"/>
+    <param name="saturation"          value="$(arg saturation)"/>
+    <param name="shutter_speed" 	    value="$(arg shutter_speed)"/>
+    <param name="iso" 	              value="$(arg iso)"/>
+    <param name="drc_level" 	        value="$(arg drc_level)"/>
+  </node>
+
+  <node pkg="rosservice" type="rosservice" name="" args="call /camera/start_capture"/>
+
+</launch>
+
