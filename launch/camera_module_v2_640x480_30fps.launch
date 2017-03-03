@@ -1,0 +1,11 @@
+<launch>
+  <node type="raspicam_node" pkg="raspicam_node" name="raspicam_node" output="screen">
+ 
+    <param name="width" value="640"/>
+    <param name="height" value="480"/>
+    <param name="framerate" value="20"/>
+    <param name="camera_frame_id" value="raspicam"/>
+
+  </node>
+
+</launch>

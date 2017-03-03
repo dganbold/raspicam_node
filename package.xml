@@ -1,38 +1,24 @@
 <?xml version="1.0"?>
-<package>
-  <name>raspicam_ros</name>
-  <version>0.0.0</version>
-  <description>The raspberry pi camera package</description>
+<package format="2">
+  <name>raspicam_node</name>
+  <version>1.0.1</version>
+  <description>ROS Package to access the raspberry pi camera</description>
   
   <maintainer email="ganbold_0324@yahoo.com">Ganbold Davaajav</maintainer>
 
-  <!-- One license tag required, multiple allowed, one license per tag -->
-  <!-- Commonly used license strings: -->
-  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>BSD</license>
 
-  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-  <!-- <url type="website">https://github.com/dganbold/ros_rpicam</url> -->
+  <buildtool_depend>catkin</buildtool_depend>  
+  <depend>compressed_image_transport</depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>camera_info_manager</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>libraspberrypi0</depend>
+  <build_depend>libraspberrypi-dev</build_depend>
 
-  <!-- The *_depend tags are used to specify dependencies -->
-  <!-- Dependencies can be catkin packages or system dependencies -->
-
-  <buildtool_depend>catkin</buildtool_depend>
-  
-  <build_depend>compressed_image_transport</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>std_msgs</build_depend>
-  
-  <run_depend>compressed_image_transport</run_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>std_msgs</run_depend>
-  <run_depend>camera_info_manager</run_depend>
-
-  <!-- The export tag contains other, unspecified, tags -->
-  <export>
-    <!-- You can specify that this package is a metapackage here: -->
-    <!-- <metapackage/> -->
-    <!-- Other tools can request additional information be placed here -->
-    
+  <export>  
   </export>
 </package>
