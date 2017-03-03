@@ -4,12 +4,12 @@ camera_name: camera
 camera_matrix:
   rows: 3
   cols: 3
-  data: [629.156393, 0, 307.594825, 0, 630.396218, 237.508408, 0, 0, 1]
+  data: [ 1, 0, 0, 0, 1, 0, 0, 0, 1]
 distortion_model: plumb_bob
 distortion_coefficients:
   rows: 1
   cols: 5
-  data: [0.062962, -0.217825, 0.000191, -0.005964, 0]
+  data: [0, 0, 0, 0, 0]
 rectification_matrix:
   rows: 3
   cols: 3
@@ -17,4 +17,4 @@ rectification_matrix:
 projection_matrix:
   rows: 3
   cols: 4
-  data: [619.990234, 0, 302.359084, 0, 0, 615.408875, 236.994677, 0, 0, 0, 1, 0]
+  data: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]
