@@ -1,7 +1,8 @@
 <launch>
-  <node type="raspicam_node" pkg="raspicam_node" name="raspicam_node" output="screen">
+  <arg name="name" default="raspicam_node" />
+  <node type="raspicam_node" pkg="raspicam_node" name="$(arg name)" output="screen">
  
-    <param name="camera_info_url" value="package://raspicam_node/camera_info/camera_module_v2_640x480.yaml"/>
+    <param name="camera_info_url" value="package://$(arg name)/camera_info/camera_module_v2_640x480.yaml"/>
     <param name="width" value="640"/>
     <param name="height" value="480"/>
     <param name="framerate" value="5"/>

@@ -9,5 +9,7 @@
     <param name="camera_frame_id" value="raspicam"/>
 
   </node>
+  
+  <node pkg="rosservice" type="rosservice" name="start_capture" args="call --wait $(arg name)/start_capture"/>
 
 </launch>
