@@ -23,11 +23,23 @@ Go to your workspace `cd ~/catkin_ws/src`.
 		catkin_make --pkg raspicam_node
 
 ## 3. Usage
-Once you have built the node, you can execute it using a launch file.
+Once camera node building is successfully done, you can run it using a launch file.
 
-	  source devel/setup.bash
-	  roslaunch raspicam_node camera_module_v2_640x480_30fps.launch
-    rosservice call /raspicam_node/start_capture
+	  	source devel/setup.bash
+	  	roslaunch raspicam_node camera_module_v2_640x480_30fps.launch
+		
+Start captune and image publish
 
-## 4. License
-raspicam_ros is released with a BSD license.
+    		rosservice call /raspicam_node/start_capture
+		
+Change parameters
+		
+		rosrun rqt_reconfigure rqt_reconfigure 
+
+## 4. Debug
+You can easily check that published image from camera node by using image_viewer.
+
+		rosrun image_view image_view image:=/raspicam_node/image_raw
+
+## License
+raspicam_node is released with a BSD license.
