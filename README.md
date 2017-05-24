@@ -30,7 +30,7 @@ Once camera node building is successfully done, you can run it using a launch fi
 		
 Start captune and image publish
 
-    		rosservice call /raspicam_node/start_capture
+		rosservice call /raspicam_node/start_capture
 		
 Change parameters
 		
