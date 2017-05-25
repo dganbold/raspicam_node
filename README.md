@@ -20,6 +20,7 @@ Go to your workspace `cd ~/catkin_ws/src`.
 2. Build
 
 	cd ~/catkin_ws/
+	
 	catkin_make --pkg raspicam_node
 
 ## 3. Usage
