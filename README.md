@@ -4,8 +4,11 @@ raspicam_node
 ROS node for mipi camera module of the Raspberry Pi.
 
 ## 1. Prerequisites
-This node is primarily supported ROS Kinetic.
-If you do not have already installed ROS in your Rapsberry Pi, we recommend you to install the ROS Indigo or Kinetic.
+First of all, you will need to connect the Camera Module to the Raspberry Pi's camera port.
+
+https://www.raspberrypi.org/documentation/usage/camera/
+
+This node is primarily supported ROS Kinetic. If you do not have already installed ROS in your Rapsberry Pi, we recommend you to install the ROS Indigo or Kinetic version.
 
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
 
