@@ -4,7 +4,7 @@ raspicam_node
 ROS node for mipi camera module of the Raspberry Pi.
 
 ## 1. Prerequisites
-First of all, you will need to connect the Camera Module to the Raspberry Pi's camera port.
+First of all, you will need to connect the Camera Module to the Raspberry Pi's camera port and enable it.
 
 https://www.raspberrypi.org/documentation/usage/camera/
 
