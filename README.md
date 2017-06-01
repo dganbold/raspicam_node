@@ -21,7 +21,7 @@ If it's not existing then use the following commands for adding an user into vid
 	sudo -s
 	usermod -a -G video `your user`
 	
-Make a rule for /dev/vchiq is accessible to users in video group:
+And also need to make a rule for /dev/vchiq is accessible to users in video group:
  	
 	echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
 	reboot
