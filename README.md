@@ -12,19 +12,21 @@ This node is primarily supported ROS Kinetic. If you do not have already install
 
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
 
-The existing user is should be in the video group in other to access to command interface between the running Linux kernel and peripherals (camera, audio subsystems etc) of the VideoCore. Make sure that by execute below: 
-	
-	groups | grep video
-	
-If it's not existing then use the following commands for adding an user into video group:
+The existing user is should be in the video group in other to access to command interface between the running Linux kernel and peripherals (camera, audio subsystems etc) of the VideoCore. 
 
-	sudo -s
-	usermod -a -G video `your user`
+1. Make sure that by execute below: 
 	
-And also need to make a rule for /dev/vchiq is accessible to users in video group:
+		groups | grep video
+	
+	If it's not existing then use the following commands for adding an user into video group:
+
+		sudo -s
+		usermod -a -G video `your user`
+	
+2. And also need to make a rule for /dev/vchiq is accessible to users in video group:
  	
-	echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
-	reboot
+		echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
+		reboot
 
 ## 2. Installation
 
