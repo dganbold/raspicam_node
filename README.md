@@ -16,8 +16,10 @@ The existing user is should be in the video group in other to access to command 
 
 	sudo -s
 	usermod -a -G video `your user`
-	# Make a rule for /dev/vchiq is accessible to users in video group:
- 	echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
+	
+Make a rule for /dev/vchiq is accessible to users in video group:
+ 	
+	echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
 	reboot
 
 ## 2. Installation
