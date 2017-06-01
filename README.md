@@ -12,6 +12,14 @@ This node is primarily supported ROS Kinetic. If you do not have already install
 
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
 
+The your user is should be in the video group in other to access to command interface between the running Linux kernel and peripherals (camera, audio subsystems etc) in the VideoCore. So make sure that by running groups | grep video. If it's not existing then use the following commands for adding an user into video group:
+
+	sudo -s
+	usermod -a -G video `your user`
+	# Make a rule for /dev/vchiq is accessible to users in video group:
+ 	echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
+	reboot
+
 ## 2. Installation
 
 Go to your workspace `cd ~/catkin_ws/src`.
