@@ -12,7 +12,12 @@ This node is primarily supported ROS Kinetic. If you do not have already install
 
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
 
-The existing user is should be in the video group in other to access to command interface between the running Linux kernel and peripherals (camera, audio subsystems etc) of the VideoCore. So make sure that by running groups | grep video. If it's not existing then use the following commands for adding an user into video group:
+The existing user is should be in the video group in other to access to command interface between the running Linux kernel and peripherals (camera, audio subsystems etc) of the VideoCore. 
+So make sure that by running 
+	
+	groups | grep video
+	
+If it's not existing then use the following commands for adding an user into video group:
 
 	sudo -s
 	usermod -a -G video `your user`
