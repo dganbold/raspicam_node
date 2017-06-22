@@ -55,7 +55,7 @@ If you want to change or tuning the parameters of camera, you can use the follow
 		
 		rosrun rqt_reconfigure rqt_reconfigure 
 		
-		rosrun dynamic_reconfigure dynparam load /raspicam_node <your parameter file>.yaml
+		rosrun dynamic_reconfigure dynparam <load or dump> /raspicam_node <your parameter file>.yaml
 		
 ![Alt text](rqt_reconfigure.bmp?raw=true "Title")
 
