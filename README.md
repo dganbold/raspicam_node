@@ -50,10 +50,12 @@ Once camera node building is successfully done, you can run it using a launch fi
 Start captune and image publish
 
 		rosservice call /raspicam_node/start_capture
-		
-Change parameters
+
+If you want to change or tuning the parameters of camera, you can use the following tools.
 		
 		rosrun rqt_reconfigure rqt_reconfigure 
+		
+		rosrun dynamic_reconfigure dynparam load /raspicam_node <your parameter file>.yaml
 
 ## 4. Debug
 You can easily check that published image from camera node by using image_viewer.
