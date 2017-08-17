@@ -63,6 +63,8 @@ If you want to change or tuning the parameters of camera, you can use the follow
 You can easily check that published image from camera node by using image_viewer.
 
 		rosrun image_view image_view image:=/raspicam_node/image_raw
+		
+![Screenshot](image_view.gif?raw=true "Title")
 
 ## License
 raspicam_node is released with a BSD license.
